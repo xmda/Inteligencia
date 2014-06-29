@@ -14,22 +14,20 @@ class ProductosController < ApplicationController
   def show
     @productos = Producto.all
     @producto = Producto.find(params[:id])
-   
     @ids = []
     @parecidos = []
 
     @productos.each do |prod|
-          #@ids.push(prod.id)
-          @parecidos.push({prod.id => Jaccard::coefficient(prod.descripcion.split(" "), @producto.descripcion.split(" "))})
+          @ids.push(prod.id)
+          @parecidos.push(Jaccard::coefficient(prod.descripcion.split(" "), @producto.descripcion.split(" ")))
     end
 
     @ordenInicial = []
-    #@parecidos.quick_sort
+    @ordenado = @parecidos.quick_sort
     #@ordenadoParecidos = []
     incremento = 0
     while incremento < @parecidos.length
       @ordenInicial.push( {incremento => @parecidos[incremento]})
-      #@ordenadoParecidos = @parecidos[incremento][incremento].quick_sort
       incremento += 1
     end
 

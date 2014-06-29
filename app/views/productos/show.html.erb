@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-
 <p>
   <strong>Productoname:</strong>
   <%= @producto.productoName %>
@@ -8,8 +7,6 @@
   <strong>Descripcion:</strong>
   <%= @producto.descripcion %>
 </p>
-
-
 <table>
   <thead>
     <tr>
@@ -20,23 +17,17 @@
     </tr>
   </thead>
   <tbody>
-  	<% @ordenInicial %>
-  	<% @ordenadoParecidos %>
-    <% @ordenadoParecidos %>
-  	<% @ids%>
-  	<%= @parecidos %>
-  	
+  	<% @reve = @productos.length %>
+  
 	<%contador = 0%>
-
     <% @productos.each do |producto| %>
       <tr>
-      	<%if @ids[contador] == producto.id %>
-
-				<td><%= @parecidos[contador] %></td>
+      	<%if @ids[contador] == producto.id and contador <= 10%>
+				<td><%= @ordenado[@reve] %></td>
 		        <td><%= producto.productoName %></td>
 		        <td><%= producto.descripcion %></td>
-	    
 	        <%contador += 1%>
+	        <%@reve -= 1%>
 	   	<%end%>
       </tr>
     <% end %>

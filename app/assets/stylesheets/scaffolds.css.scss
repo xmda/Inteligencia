@@ -1,15 +1,28 @@
-body {
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+P { 
+font-size : 12pt; 
+font-family : arial,helvetica; 
+font-weight : normal; 
+} 
+
+H1 { 
+font-size : 36pt; 
+font-family : verdana,arial; 
+text-decoration : underline; 
+text-align : center; 
+background-color : Teal; 
+} 
+
+BODY { 
+background-color :    #C0C0C0; 
+font-family : arial; 
+color : White; 
 }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  color:#0000FF;
 }
 
 pre {
@@ -52,7 +65,8 @@ div {
   padding-bottom: 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
-  h2 {
+  
+h2 {
     text-align: left;
     font-weight: bold;
     padding: 5px 5px 5px 15px;
@@ -63,7 +77,43 @@ div {
     color: #fff;
   }
   ul li {
+
     font-size: 12px;
     list-style: square;
   }
+
+ th{
+
+    font-size: 12px;
+    list-style: square;
+    background-color: #c00;
+  }
+
+ul.navbar {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 2em;
+  left: 1em;
+  width: 9em }
+
+ul.navbar li {
+  background: white;
+  margin: 0.5em 0;
+  padding: 0.3em;
+  border-right: 1em solid black }
+ul.navbar a {
+  text-decoration: none }
+a:link {
+  color: red }
+
+a:visited {
+  color: #fff 
+  }
+
+address {
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: thin dotted }
 }

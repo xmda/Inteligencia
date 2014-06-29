@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :centro_atencions
+
+  resources :categoria
+
   resources :productos
 
   get 'inicio/index'
