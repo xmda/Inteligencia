@@ -11,6 +11,12 @@
     </div>
   <% end %>
 <div class="field">
+
+    <%= xxx = text_field :cliente, :nombre %>
+
+    <%= session[:cliente]=params[:cliente]%>
+    <%=  params[:clie]=session[:clie] %>
+
 	  <% @b = Classifier::Bayes.new 'soporte', 'reparacion' %>
 	  <% @b.train_soporte "para soporte y asistencia" %>
 	  <% @b.train_reparacion "reparacion y mantemiento de equipo de computo" %>
